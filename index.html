@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+		<title>CEIIS  | Entrar </title>
+		<link rel="shortcut icon" href="../img/logo.png">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/bootstrap-reset.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="../css/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="../css/login.css" rel="stylesheet">
+		<link  href="../css/owl.carousel.css" rel="stylesheet" type="text/css">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/style-responsive.css" rel="stylesheet">
+		<link href="../css/styles__ltr.css" rel="stylesheet">
+	</head> 
+	<body>
+		<div class="container">
+			<header class="CEIIS">
+				<img class="logo" src="../img/logo.png" alt="Logo de CEIIS">
+				<h1 class="tittle_logo">Centro de Estudiantes de Ingeniería Industrial y de Sistemas</h1>
+			</header>
+			<form class="form-signin" method="POST">
+				<!input type="hidden" name="tipo" value="acceso">
+				<h2 class="form-signin-heading"> SERVICIO DE PRÉSTAMOS - CEIIS</h2>
+				<div class="login-wrap">
+					<div class="acomodar-icon">
+						<i class="user fas fa-user-circle"></i>
+					</div>
+					<div class="acomodar">
+						<input class="form-control" placeholder="Código UNI" id="login_codUni" autofocus="on" name="codUni" type="text">
+					</div>
+					<br>
+					<div class="acomodar-icon">
+						<i class="pwd fas fa-key"></i>
+					</div>
+					<div class="acomodar">
+						<input type="password" class="form-control" placeholder="Clave" name="clave" id="login_clave">
+					</div>
+					<div class="registrar-recuperar">
+						<div class="registrar">
+							<a id="registro" data-toggle="modal" href="#divRegistrar"> Registrarme </a>
+						</div>
+						<div class="recuperar">
+							<a id="recupero" data-toggle="modal" href="#divRecuperar"> ¿Olvidaste tu clave?</a>
+						</div>
+					</div>
+					<button class="btn btn-lg btn-login btn-block" type="submit" id="boton"><b>ENTRAR</b></button>
+				</div>
+			</form> 
+			<form class="form-signin" method="POST" action="https://www.academico.uni.edu.pe/alumno/recupera-clave">
+				<input type="hidden" name="tipo" value="recuperarClave">
+				<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="divRecuperar" class="modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title">¿Olvidaste tu clave?</h4>
+							</div>
+							<div class="modal-body">
+							<p>Ingresa tus datos para recuperar tu clave</p>
+							<input type="text" name="codUni2" placeholder="Código UNI" autocomplete="off" class="form-control placeholder-no-fix">
+							<input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+							<input type="hidden" name="_token" value="9lEACAEpFdFsMq6HzWN8tXOExWXIirdeAOzcg87V">
+							<input type="text" name="fecnac" placeholder="Fecha de Nacimiento (Ejemplo: 06/10/1995)" autocomplete="off" class="form-control placeholder-no-fix">
+							<br>
+							</div>
+							<div class="modal-footer">
+							<button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
+							<button class="btn btn-success" type="submit" id="recuperar">Recuperar Clave</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>  
+			<form class="form-signin" method="POST" action="##">
+				<input type="hidden" name="tipo" value="recuperarClave">
+				<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="divRecuperar" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title">¿Olvidaste tu clave?</h4>
+						</div>
+						<div class="modal-body">
+							<p>Ingresa tus datos para recuperar tu clave</p>
+							<input type="text" name="codUni2" placeholder="Código UNI" autocomplete="off" class="form-control placeholder-no-fix">
+							<input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+							<input type="hidden" name="_token" value="9lEACAEpFdFsMq6HzWN8tXOExWXIirdeAOzcg87V">
+							<input type="text" name="fecnac" placeholder="Fecha de Nacimiento (Ejemplo: 06/10/1995)" autocomplete="off" class="form-control placeholder-no-fix">
+							<br>
+						</div>
+						<div class="modal-footer">
+							<button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
+							<button class="btn btn-success" type="submit" id="recuperar">Recuperar Clave</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			</form>  
+		</div>
+	</body>
+</html>
