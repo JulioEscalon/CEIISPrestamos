@@ -5,7 +5,8 @@
 body{
     margin:0%;
     padding:0%;
-    background-color: #9eb3c2;
+    /*background-color: #9eb3c2;*/
+    background: url("../img/landing.jpg");
 }
 .header-main{
     background-color: whitesmoke;  /*rgb(175,171,171);*/
@@ -72,6 +73,7 @@ body{
 .bell:hover{
     color:var(--color-hover);
 }
-.menu:active{
-    
+.logout{
+    font-size: 20px;
+    color: steelblue;
 }

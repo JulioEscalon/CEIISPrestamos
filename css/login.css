@@ -1,5 +1,8 @@
+*{
+    color:#fff;
+}
 .CEIIS {
-	background-color: rgba(56,53,61,0.9);
+	background-color: rgba(56,53,61,0.5);
 	overflow: hidden;
 	display:flex;
 	justify-content: center;
@@ -23,9 +26,8 @@ header h1 {
 body{
     margin: 0%;
     padding: 0%;
-    background: url("../img/wallpaper.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size:100vw 100vh;
+    background: url("../img/landing.jpg");
+   /* background-attachment: fixed;*/
     font-family:'Open Sans', sans-serif;
 }
 .logo{
@@ -40,12 +42,14 @@ body{
 .acomodar input[type="password"]:focus{
     border: darkblue 1.2px solid;
     box-shadow: 3px 3px 1px rgb(0, 0, 128,0.3);
+    color: black;
+    font-weight: normal;
 }
 div i{
     margin: 0px;
     padding: 0px;
     position: relative;
-    color: midnightblue;
+    color: darkblue;
 }
 div .user,.pwd{
     display: inline-block;
@@ -59,7 +63,7 @@ div .user,.pwd{
     top: 10px;
 }
 div i:hover{
-    color: darkblue;
+    color:midnightblue ;
 }
 .acomodar,.acomodar-icon{
     margin:0;
@@ -132,4 +136,7 @@ div#ceiis-logo,.letras{
         width: 150px;
         height: 100px;
     }
+}
+a:hover{
+    text-decoration: none;
 }
