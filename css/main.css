@@ -72,3 +72,6 @@ body{
 .bell:hover{
     color:var(--color-hover);
 }
+.menu:active{
+    
+}
