@@ -93,3 +93,43 @@ button:hover{
     position: relative;
     top: 4px;
 }
+div#ceiis-logo,.letras{
+    display:none;
+}
+/*-----------Querys------------*/
+@media screen and (max-width:700px){
+    .CEIIS h1{
+        font-size: 30px;
+    }
+    .CEIIS img{
+        margin:auto;
+    }
+}
+@media screen and (max-width:500px){
+    .CEIIS{
+        display: none;
+    }
+    div#ceiis-logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top:50px;
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+    }
+    .cont{
+        background-color: black;
+        width: auto;
+        border-radius: 90%;
+        margin-bottom: 20px;
+    }
+    div#ceiis-logo img{
+        height: 150px;
+    }
+    .letras{
+        display: initial;
+        width: 150px;
+        height: 100px;
+    }
+}
