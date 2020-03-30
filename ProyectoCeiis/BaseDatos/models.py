@@ -6,6 +6,7 @@ class Persona(models.Model):
      Id_Persona=models.CharField(max_length=200,primary_key=True)
      Nombres=models.CharField(max_length=200,null=False,blank=False)
      Apellido_Paterno=models.CharField(max_length=200,null=False,blank=False)
+     Apellido_Materno=models.CharField(max_length=200,null=False,blank=False)
      Sexo=models.CharField(max_length=200,null=False,blank=False)
 
 class Perfil(models.Model):
