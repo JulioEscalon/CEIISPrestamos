@@ -3,6 +3,11 @@
     margin:0;
     padding:0;
 }
+.contenedor{
+    display: flex;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease;
+}
 #mostrar-ocultar{
     display: none;
 }
@@ -10,20 +15,20 @@
     cursor: pointer;
 }
 #mostrar-ocultar:checked ~ #toggle{
-    display: flex;
+    position: relative;
+    left:0;
+}
+#toggle{
+    transition: all 0.5s ease;
 }
 .table{
+    display: flex;
+    position: absolute;
+    left: -20%;
     background-color: rgba(33, 33, 33,0.9);
-    height: 100vh;
+    height: 90vh;
     width:20%;
-    display: none;
 }
-/*Aggggagafsa
-dasfasfafasfasfsw
-aoaaosiafasgasgaoneons
-aoagnagaongafaoasfaksfnasifoasfn
-afasijru´pajfaeijeauaueaf
-*/
 ul{
     list-style: none;
     display: flex;
@@ -49,4 +54,13 @@ ul li .menu{
 }
 ul li .menu:hover{
     font-weight: bold;
+}
+
+/*------------------MAIN--------------------------------*/
+.main{
+    margin:20px;
+    display: block;
+    width: 100%;
+    height: 90vh;
+    background-color: teal;
 }

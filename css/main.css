@@ -8,6 +8,16 @@ body{
     /*background-color: #9eb3c2;*/
     background: url("../img/landing.jpg");
 }
+.finta{
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding:0px;
+    font-size: 20px;
+    float: left;
+    color: whitesmoke;
+    z-index: 1;
+}
 .header-main{
     background-color: whitesmoke;  /*rgb(175,171,171);*/
     margin:0; 
@@ -17,16 +27,19 @@ body{
     height: 50px;
     flex-direction: row;
 }
-.icon{
+.menu-icon{
+    position:fixed;
+    top:-0.5px;
+    left: 0.5px;
     margin-top: 15px;
     margin-left: 10px;
     margin-right: 10px;
     padding:0px;
     font-size: 20px;
-    color: var(--color-default);
     float: left;
+    color: var(--color-default);
 }
-.icon:hover{
+.contenedor i:hover{
     color: var(--color-hover);
     cursor: pointer;
 }
@@ -71,4 +84,7 @@ body{
 }
 .bell:hover{
     color:var(--color-hover);
+}
+.campana:hover{
+    cursor: pointer;
 }
