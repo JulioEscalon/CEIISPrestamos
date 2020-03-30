@@ -1,0 +1,40 @@
+/*------Eventos click :v------*/
+*{
+    margin:0;
+    padding:0;
+}
+#mostrar-ocultar{
+    display: none;
+}
+#mostrar-ocultar + i{
+    position: absolute;
+}
+.table{
+    /*display: none;*/
+    background-color: rgba(33, 33, 33,0.9);
+    height: 100vh;
+    width:20%;
+    display: flex;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+ul li{
+    margin:20px 30px;
+    
+}
+ul li .menu{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+}
+.menu i{
+    margin-right: 15px;
+}
+ul li .menu:hover{
+    font-size: 1.5rem;
+}

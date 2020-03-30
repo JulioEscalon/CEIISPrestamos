@@ -1,0 +1,138 @@
+*{
+    color:#fff;
+}
+.CEIIS {
+	background-color: rgba(56,53,61,0.5);
+	overflow: hidden;
+	display:flex;
+	justify-content: center;
+    align-items:center;
+}
+header h1 {
+	font-family: 'Oswald', sans-serif;
+	float: right;  
+	margin-top: 3px;  
+	padding: 2px;
+	border: 0;
+	font-weight: bold;
+	color: #62D2E8;
+	position: center;
+}
+.logo{
+    height: 50px;
+    
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    background: url("../img/landing.jpg");
+   /* background-attachment: fixed;*/
+    font-family:'Open Sans', sans-serif;
+}
+.logo{
+    height: 60px;
+}
+.acomodar input[type="text"]:hover,
+.acomodar input[type="password"]:hover{
+    border: midnightblue 1px solid;
+}
+.acomodar input[type="text"]:focus,
+.acomodar input[type="password"]:focus{
+    border: darkblue 1.2px solid;
+    box-shadow: 3px 3px 1px rgb(0, 0, 128,0.3);
+    color: black;
+    font-weight: normal;
+}
+div i{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    color: darkblue;
+}
+div .user,.pwd{
+    display: inline-block;
+    font-size: 40px;
+}
+.acomodar{
+    width:84%
+}
+.acomodar-icon{
+    position:relative;
+    top: 10px;
+}
+div i:hover{
+    color:midnightblue ;
+}
+.acomodar,.acomodar-icon{
+    margin:0;
+    padding:0;
+    display: inline-block;
+}
+.registrar-recuperar{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    top:10px;
+}
+.registrar{
+    display: inline;
+}
+.recuperar{
+    float: right;
+}
+
+button{
+    position:relative;
+    top: 25px;
+    transition:font-size 0.3s ease;
+}
+button:hover{
+    font-size: 2rem;
+}
+.tittle_logo{
+    position: relative;
+    top: 4px;
+}
+div#ceiis-logo,.letras{
+    display:none;
+}
+/*-----------Querys------------*/
+@media screen and (max-width:700px){
+    .CEIIS h1{
+        font-size: 30px;
+    }
+    .CEIIS img{
+        margin:auto;
+    }
+}
+@media screen and (max-width:500px){
+    .CEIIS{
+        display: none;
+    }
+    div#ceiis-logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top:50px;
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+    }
+    .cont{
+        background-color: black;
+        width: auto;
+        border-radius: 90%;
+        margin-bottom: 20px;
+    }
+    div#ceiis-logo img{
+        height: 150px;
+    }
+    .letras{
+        display: initial;
+        width: 150px;
+        height: 100px;
+    }
+}
+a:hover{
+    text-decoration: none;
+}
