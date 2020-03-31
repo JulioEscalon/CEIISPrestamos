@@ -19,7 +19,7 @@ header h1 {
 	position: center;
 }
 .logo{
-	height: 50px;
+	height: 60px;
 }
 body{
     margin: 0%;
@@ -29,7 +29,7 @@ body{
     font-family:'Open Sans', sans-serif;
 }
 .logo{
-    height: 60px;
+    height: 50px;
 }
 .acomodar input[type="text"]:hover,
 .acomodar input[type="password"]:hover{
@@ -73,7 +73,6 @@ div i:hover{
     position: relative;
     top:10px;
 }
-/*asfasf*/
 .registrar{
     display: inline;
 }
@@ -109,28 +108,56 @@ div#ceiis-logo,.letras{
     .CEIIS{
         display: none;
     }
+    .cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     div#ceiis-logo{
         display: flex;
-        align-items: center;
         justify-content: center;
-        flex-direction: column;
-        margin-top:50px;
-        flex-wrap: wrap;
+        margin-top:20px;
         margin-bottom: 0px;
     }
-    .cont{
-        background-color: black;
-        width: auto;
-        border-radius: 90%;
-        margin-bottom: 20px;
-    }
     div#ceiis-logo img{
-        height: 150px;
+        height: 100px;
     }
     .letras{
-        display: initial;
-        width: 150px;
-        height: 100px;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: -80px;
+    }
+}
+@media screen and (max-width:321px){
+    .letras{
+        display: none;
+    }
+    div#ceiis-logo img{
+        height: 120px;
+        margin-bottom: -90px;
+        overflow: hidden;
+    }
+    .form-signin-heading label span{
+       display: none;
+    }
+    .registrar,.recuperar{
+        width: 50%;
+    }
+    .acomodar-icon{
+        display: block;
+        position: static;
+        margin-bottom: 5px;
+    }
+    .acomodar{
+        width: 100%;
+    }
+    .back{
+        display: flex;
+        flex-flow: column;
+    }
+    h2 label{
+        font-weight: lighter;
     }
 }
 a:hover{

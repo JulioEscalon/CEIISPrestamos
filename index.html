@@ -21,38 +21,40 @@
 			<div id=ceiis-logo>
 				<div class="cont">
 					<img src="img/redondo.png" alt="Logo de CEIIS">
+					<img src="img/logotipo.png" class="letras">
 				</div>
-				<img src="img/logotipo.png" class="letras" width="200" height="100">
 			</div>
 			<form class="form-signin" method="POST">
-				<h2 class="form-signin-heading"> SERVICIO DE PRÉSTAMOS - CEIIS</h2>
+				<h2 class="form-signin-heading"> <label>SERVICIO DE PRÉSTAMOS<span> - CEIIS</span></label></h2>
 				<div class="login-wrap">
-					<div class="acomodar-icon">
-						<i class="user fas fa-user-circle"></i>
-					</div>
-					<div class="acomodar">
-						<input class="form-control" placeholder="Código UNI" id="login_codUni" autofocus="on" name="codUni" type="text">
-					</div>
-					<br>
-					<div class="acomodar-icon">
-						<i class="pwd fas fa-key"></i>
-					</div>
-					<div class="acomodar">
-						<input type="password" class="form-control" placeholder="Clave" name="clave" id="login_clave">
+					<div class="back">
+						<div class="acomodar-icon">
+							<i class="user fas fa-user-circle"></i>
+						</div>
+						<div class="acomodar">
+							<input class="form-control" placeholder="Código UNI" id="login_codUni" autofocus="on" name="codUni" type="text">
+						</div>
+						<br>
+						<div class="acomodar-icon">
+							<i class="pwd fas fa-key"></i>
+						</div>
+						<div class="acomodar">
+							<input type="password" class="form-control" placeholder="Clave" name="clave" id="login_clave">
+						</div>
 					</div>
 					<div class="registrar-recuperar">
 						<div class="registrar">
 							<a id="registro" data-toggle="modal" href="#Registrar"> Registrarme </a>
 						</div>
 						<div class="recuperar">
-							<a id="recupero" data-toggle="modal" href="#Recuperar"> ¿Olvidaste tu clave?</a>
+							<a id="recupero" data-toggle="modal" href="#Recuperar"> Recuperar Clave</a>
 						</div>
 					</div>
 					<button class="btn btn-lg btn-login btn-block" type="submit" id="boton">
 						<a href="https://julioescalon.github.io/CEIISPrestamos/main.html"> 
 							<b>ENTRAR</b>
 						</a>
-					</button> 
+					</button>
 				</div>
 			</form> 
 			<form class="form-signin" method="POST" action="https://www.academico.uni.edu.pe/alumno/recupera-clave">
