@@ -25,11 +25,14 @@ body{
     margin: 0%;
     padding: 0%;
     background: url("../img/landing.jpg");
-   /* background-attachment: fixed;*/
     font-family:'Open Sans', sans-serif;
 }
 .logo{
     height: 50px;
+}
+.back .acomodar input[type="text"],
+.back .acomodar input[type="password"]{
+    border: steelblue 1px solid;
 }
 .acomodar input[type="text"]:hover,
 .acomodar input[type="password"]:hover{
@@ -46,7 +49,7 @@ div i{
     margin: 0px;
     padding: 0px;
     position: relative;
-    color: darkblue;
+    color: #042768;
 }
 div .user,.pwd{
     display: inline-block;
@@ -60,7 +63,7 @@ div .user,.pwd{
     top: 10px;
 }
 div i:hover{
-    color:midnightblue ;
+    color: #03122F ;
 }
 .acomodar,.acomodar-icon{
     margin:0;
@@ -68,25 +71,21 @@ div i:hover{
     display: inline-block;
 }
 .registrar-recuperar{
-    margin: 0px;
+    width:100%;
     padding: 0px;
+    display: flex;
     position: relative;
     top:10px;
+    justify-content: space-around;
 }
-.registrar{
-    display: inline;
-}
-.recuperar{
-    float: right;
-}
-
-button{
+#boton{
+    font-weight: bold;
     position:relative;
     top: 25px;
     transition:font-size 0.3s ease;
 }
-button:hover{
-    font-size: 2rem;
+#boton:hover{
+    font-size: 20px;
 }
 .tittle_logo{
     position: relative;
@@ -142,7 +141,7 @@ div#ceiis-logo,.letras{
        display: none;
     }
     .registrar,.recuperar{
-        width: 50%;
+        width: 100%;
     }
     .acomodar-icon{
         display: block;
@@ -169,4 +168,161 @@ a:hover{
     height: 100vh;
     position:fixed;
     z-index: -1;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------MODAL--------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------------*/
+input[type="radio"]{
+    display:none;
+}
+.contenedor-modal{
+    display: flex;
+    position:fixed;
+    width: 100%;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+#modal-registrar{
+    position: fixed;
+    top: -100vh;
+}
+#modal-recuperar{
+    position:fixed;
+    top:-100vh;
+}
+#abrirRegistroForm:checked ~ #modal-registrar{
+    top:0;
+}
+#abrirRecuperarClave:checked ~ #modal-recuperar{
+    top:0;
+}
+.ventana-modal{
+    position: relative;
+    width: 30%;
+    min-width: 300px;
+    max-width: 600px;
+    margin:auto;
+}
+.head-modal{
+    padding:8px 20px;
+    display:flex;
+    background-color: #283593;
+    border-radius: 10px 10px 0 0;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.agora{
+    position:relative;
+    bottom:10px;
+    right: 20px;
+}
+.xXx{
+    font-size: 16px;
+    display: flex;
+    padding-left:2px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    flex-shrink: 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0,0.4);
+}
+.xXx:hover{
+    cursor: pointer;
+}
+.body-modal{
+    background-color: whitesmoke;
+    padding:10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0 0 10px 10px;
+    border: 1px #283593 solid;
+}
+.contenedor-modal .ventana-modal .body-modal input[type="text"],
+.contenedor-modal .ventana-modal .body-modal input[type="password"],
+.contenedor-modal .ventana-modal .body-modal input[type="email"]{
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px 5px;
+    border-radius: 10px;
+    color: #222;
+    border: 1px steelblue solid;
+    font-size: 12px;
+}
+.contenedor-modal .ventana-modal .body-modal input[type="text"]:hover,
+.contenedor-modal .ventana-modal .body-modal input[type="password"]:hover,
+.contenedor-modal .ventana-modal .body-modal input[type="email"]:hover{
+    border: 1px midnightblue solid;
+}
+.contenedor-modal .ventana-modal .body-modal input[type="text"]:focus,
+.contenedor-modal .ventana-modal .body-modal input[type="password"]:focus,
+.contenedor-modal .ventana-modal .body-modal input[type="email"]:focus{
+    border-radius: 3px;
+    border: 1px darkblue solid;
+    box-shadow: 1px 1px 2px midnightblue;
+    font-size: 13px;
+}
+.nocumple{
+    margin:auto;
+    width: 80%;
+}
+.contenedor-modal label{
+    margin:0;
+    width: 0;
+    height: 0;
+}
+.nocumple .error{
+    display: none;
+    /*display:flex;*/
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 23, 69, 0.5);
+    padding:5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.nocumple .error span{
+    color: rgba(213, 0, 0);
+    font-weight: bold;
+    margin-top: 6px;
+    text-align: justify;
+}
+.botones{
+    display: flex;
+    width: 90%;
+    margin: 10px auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.botones input[type="submit"]{
+    color: whitesmoke;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #283593;
+    border:0.8px #283593 solid;
+    box-shadow: none;
+    transition: all 0.5s ease;
+}
+.botones div{
+    position: relative;
+}
+.botones input[type="submit"]:hover{
+    cursor: pointer;
+    background-color:whitesmoke;
+    color: #283593;
+}
+.botones input[type="submit"]:active{
+    background-color: steelblue;
+    font-size: 16.5px;
+    color:white;
 }

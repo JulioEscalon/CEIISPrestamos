@@ -10,6 +10,7 @@
 		<link href="css/login.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/style-responsive.css" rel="stylesheet">
+		<script src="js/login.js"></script>
 	</head> 
 	<body>
 		<div id="particles-js"></div>
@@ -24,7 +25,7 @@
 					<img src="img/logotipo.png" class="letras">
 				</div>
 			</div>
-			<form class="form-signin" method="POST">
+			<form id="form" class="form-signin">
 				<h2 class="form-signin-heading"> <label>SERVICIO DE PRÉSTAMOS<span> - CEIIS</span></label></h2>
 				<div class="login-wrap">
 					<div class="back">
@@ -32,80 +33,91 @@
 							<i class="user fas fa-user-circle"></i>
 						</div>
 						<div class="acomodar">
-							<input class="form-control" placeholder="Código UNI" id="login_codUni" autofocus="on" name="codUni" type="text">
+							<input class="form-control" placeholder="Código UNI" id="login_codUni" autofocus="on" name="codUni" type="text" autocomplete="off">
 						</div>
 						<br>
 						<div class="acomodar-icon">
 							<i class="pwd fas fa-key"></i>
 						</div>
 						<div class="acomodar">
-							<input type="password" class="form-control" placeholder="Clave" name="clave" id="login_clave">
+							<input type="password" class="form-control" autocomplete="off" placeholder="Clave" name="clave" id="login_clave">
+						</div>
+					</div>
+					<div class="nocumple">
+						<div class="error" id="faltaCampo">
+							<span>Ingrese código UNI y clave.</span>
+							<div class="xXx" onclick="cerrar()">×</div>
+						</div>
+						<div class="error" id="no-coincide">
+							<span>Usuario y/o contraseña no coincide.</span>
+							<div class="xXx" onclick="cerrar()">×</div>
 						</div>
 					</div>
 					<div class="registrar-recuperar">
-						<div class="registrar">
-							<a id="registro" data-toggle="modal" href="#Registrar"> Registrarme </a>
+						<input type="radio" name="registrarse" id="abrirRegistroForm"><label for="abrirRegistroForm"><div class="registrar" id="registro">Registrarme</div></label>
+						<input type="radio" name="recuperarPsw" id="abrirRecuperarClave"><label for="abrirRecuperarClave"><div class="recuperar" id="recupero">Recuperar Clave</div></label>
+						<div class="contenedor-modal" id="modal-registrar">
+							<div class="ventana-modal" id="ventanaRegistro">
+								<div class="head-modal">
+									<div class="titulo">Registrarme</div><input type="radio" name="registrarse" id="cerrarRegistro"><label for="cerrarRegistro"><div class="xXx agora" id="closeRegistro">×</div></label> 
+								</div>
+								<div class="body-modal">
+									<input type="text" name="nombres" id="registrarNombres" autocomplete="off" placeholder="Nombres">
+									<input type="text" name="apellidos" id="registrarApellidos" autocomplete="off" placeholder="Apellidos">
+									<input type="text" name="codigoUNI" id="registrarCodigo" autocomplete="off" placeholder="Código UNI">
+									<input type="email" name="email" id="registrarEmail" autocomplete="off" placeholder="Correo UNI" required>
+									<input type="email" name="email" id="registrarEmailAlternativo" autocomplete="off" placeholder="Correo alternativo" required>
+									<input type="password" name="clave" id="registrarClave" autocomplete="off" placeholder="Clave">
+									<div class="nocumple">
+										<div class="error" id="rellenarCampos1">
+											<span>Algunos campos no han sido llenados o no se llenaron adecuadamente.</span>
+											<div class="xXx" onclick="cerrar()">×</div>
+										</div>
+									</div>
+									<div class="botones">
+										<div>
+											<input type="submit" id="botonRegistrar" value="Registrar">
+										</div>
+									</div>		
+								</div>
+							</div>
 						</div>
-						<div class="recuperar">
-							<a id="recupero" data-toggle="modal" href="#Recuperar"> Recuperar Clave</a>
+						<div class="contenedor-modal" id="modal-recuperar">
+							<div class="ventana-modal" id="ventanaRecupero">
+								<div class="head-modal">
+									<div class="titulo">Recuperar cuenta</div><input type="radio" name="recuperarPsw" id="cerrarRecupero"><label for="cerrarRecupero"><div class="xXx agora" id="closeRecupero">×</div></label>
+								</div>
+								<div class="body-modal">
+									<input type="text" name="codigoUNI" id="recuperarCodigo" autocomplete="off" placeholder="Código UNI">
+									<input type="email" name="email" id="recuperarEmail" autocomplete="off" placeholder="Correo UNI">
+									<input type="password" name="clave" id="recuperarClave" autocomplete="off" placeholder="Ingrese clave">
+									<input type="password" name="clave" id="recuperarClave2" autocomplete="off" placeholder="Confirme su clave">
+									<div class="nocumple">
+										<div class="error" id="rellenarCampos2">
+											<span>Algunos campos no están llenados o no no se llenaron adecuadamente.</span>
+											<div class="xXx" onclick="cerrar()">×</div>
+										</div>
+										<div class="error" id="coincidirClaves">
+											<span>Las contraseñas no coinciden.</span>
+											<div class="xXx" onclick="cerrar()">×</div>
+										</div>
+										<div class="error" id="no-coincide">
+											<span>Usuario y/o email no coincide.</span>
+											<div class="xXx" onclick="cerrar()">×</div>
+										</div>
+									</div>
+									<div class="botones">
+										<div>
+											<input type="submit" id="botonRecuperar" value="Enviar">
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<button class="btn btn-lg btn-login btn-block" type="submit" id="boton">
-						<a href="https://julioescalon.github.io/CEIISPrestamos/main.html"> 
-							<b>ENTRAR</b>
-						</a>
-					</button>
+					<input class="btn btn-lg btn-login btn-block" type="submit" id="boton" value="ENTRAR">
 				</div>
 			</form> 
-			<form class="form-signin" method="POST" action="https://www.academico.uni.edu.pe/alumno/recupera-clave">
-				<input type="hidden" name="tipo" value="recuperarClave">
-				<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="divRecuperar" class="modal fade">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-							<h4 class="modal-title">¿Olvidaste tu clave?</h4>
-							</div>
-							<div class="modal-body">
-							<p>Ingresa tus datos para recuperar tu clave</p>
-							<input type="text" name="codUni2" placeholder="Código UNI" autocomplete="off" class="form-control placeholder-no-fix">
-							<input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-							<input type="text" name="fecnac" placeholder="Fecha de Nacimiento (Ejemplo: 06/10/1995)" autocomplete="off" class="form-control placeholder-no-fix">
-							<br>
-							</div>
-							<div class="modal-footer">
-							<button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
-							<button class="btn btn-success" type="submit" id="recuperar">Recuperar Clave</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</form>  
-			<form class="form-signin" method="POST" action="##">
-				<input type="hidden" name="tipo" value="recuperarClave">
-				<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="divRecuperar" class="modal fade">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-							<h4 class="modal-title">¿Olvidaste tu clave?</h4>
-						</div>
-						<div class="modal-body">
-							<p>Ingresa tus datos para recuperar tu clave</p>
-							<input type="text" name="codUni2" placeholder="Código UNI" autocomplete="off" class="form-control placeholder-no-fix">
-							<input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-							<input type="hidden" name="_token" value="9lEACAEpFdFsMq6HzWN8tXOExWXIirdeAOzcg87V">
-							<input type="text" name="fecnac" placeholder="Fecha de Nacimiento (Ejemplo: 06/10/1995)" autocomplete="off" class="form-control placeholder-no-fix">
-							<br>
-						</div>
-						<div class="modal-footer">
-							<button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
-							<button class="btn btn-success" type="submit" id="recuperar">Recuperar Clave</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			</form>  
 		</div>
 		<script src="js/particles.min.js"></script>
 		<script src="js/app.js"></script>
