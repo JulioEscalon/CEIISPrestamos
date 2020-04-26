@@ -1,5 +1,9 @@
 *{
     color:#fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .CEIIS {
 	background-color: rgba(56,53,61,0.5);

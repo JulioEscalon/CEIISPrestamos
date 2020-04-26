@@ -7,6 +7,7 @@
         <title>CEIIS | Inicio</title>
         <link href="css/main.css" rel="stylesheet">
         <link href="css/experimentando.css" rel="stylesheet">
+        <script src="js/main.js"></script>
     </head>
     <body>
         <div class="header-main">
@@ -14,30 +15,295 @@
                 <i class="finta fas fa-bars"></i>
             </div>
             <div class="logotipo">
-                <a href="https://julioescalon.github.io/CEIISPrestamos/main.html">
+                <a href="main.html">
                     <img class="logo-ceiis" src="img/logotipo2.png" alt="Logo de CEIIS" title="Ir a Inicio">
                 </a>    
             </div>
             <div class="user-menu">
-                <p>Sr GAAA <i class="combo fas fa-caret-down"></i></p>
-            </div>
-            <div class="bell">
-                <input type="checkbox" id="notificaciones"><label for="notificaciones"><i class="campana fas fa-bell"></i></label>
-                <div></div>
+                <p>Julio Escalón <i class="combo fas fa-caret-down"></i></p>
             </div>
         </div>
         <div class="contenedor">
             <input type="checkbox" id="mostrar-ocultar"><label for="mostrar-ocultar"><i class="menu-icon fas fa-bars"></i></label>
             <div class="table" id="toggle">
                 <ul>
-                    <li><a href="#" class="menu">Evento 1</a></li>
-                    <li><a href="#" class="menu">Evento 2</a></li>
-                    <li><a href="#" class="menu">Evento 3</a></li>
-                    <li><a href="https://julioescalon.github.io/CEIISPrestamos/index.html" class="menu"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión  </a></li>
+                    <li>
+                        <div class="cont-lista">
+                            <div id="deporte-menu" class="menu">Deporte y entretenimiento</div><div class="combito"><i class="fas fa-chevron-down"></i></div></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cont-lista">
+                            <div id="academico-menu" class="menu">Académico</div><div class="combito"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cont-lista">
+                            <div id="compra-menu" class="menu">Comprar</div><div class="combito"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                    </li>
+                    <li><a   id="ultima" href="index.html" class="menu"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
                 </ul>
             </div>
             <div class="main">
-                <h1>Hueviendo ando</h1>
+                <div class="firstView" id="firstView">
+                    <div class="cont-principal" id="cont-principal">
+                        <h2>Novedades</h2>
+                        <div class="novedades">
+                            <div class="noticia nueva">La página web del CEIIS ya está disponible :v</div>
+                            <div class="noticia nueva">La página web del CEIIS ya está disponible :v</div>
+                            <div class="noticia nueva">La página web del CEIIS ya está disponible :v</div>
+                            <div class="noticia nueva">La página web del CEIIS ya está disponible :v</div>
+                        </div>
+                        <h2>Artículos frecuentes</h2>
+                        <div class="noticia frecuente">Por definir</div>
+                    </div>
+                    <div class="cont-secundario">
+                        <h3>Notificaciones</h3>
+                        <div class="noticia prestamo">
+                            <div class="aviso">
+                                Usted debe una calculadora<br> Modelo:xxxxx-xxxx <br>Codigo: xxxxxxA
+                            </div>
+                            <div class="foto">
+                            </div>
+                        </div>
+                        <div class="noticia prestamo">
+                            <div class="aviso">Usted debe una pelota de fútbol<br>Modelo:xxxxx-xxxx <br>Código: xxxxxxA</div></div>
+                            <div class="foto"></div>
+                        <div class="noticia deuda">
+                            <div class="aviso">Tiene una mora de 5 soles por no devolver calculadora<br>Modelo:xxxx-yy<br>Código: xxxxxB</div>
+                            <div class="foto"></div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="cont" id="deporte">
+                    <div class="articulo" id="ajedrez">
+                        <div class="imagen"><img src="img/piezas-ajedrez.jpg"></div>
+                        <div class="dato titulo">Tablero y piezas</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="reloj">
+                        <div class="imagen"><img src="img/reloj-ajedrez.jpg"></div>
+                        <div class="dato titulo">Reloj de Ajedrez</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="futbol">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Balón de Fútbol</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="basket">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Balón de Basket</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="futsal">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Balón de Futsal</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>    
+                    </div>
+                    <div class="articulo" id="balonVoley">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Balón de Voley</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="netVoley">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Net de Voley</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="astaVoley">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Astas de Voley</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="canchaFutsal">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Cancha de Futsal</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="guitarra">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Guitarra</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                </div>
+                <div class="cont" id="academico">
+                    <div class="articulo" id="guardapolvo">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Guardapolvos</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="calculadora">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Calculadora</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="escuadra">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Juego de escuadras</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="pistoletes">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Juego de Pistoletes</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="escalimetro">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Escalímetro</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                    <div class="articulo" id="compass">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Compás</div>
+                        <div class="dato info"><label>Modelo: </label></div>
+                        <a href="registrarPrestamo.html"><input type="submit" value="Prestar"></a>
+                    </div>
+                </div>
+                <div class="cont" id="compra">
+                    <div class="articulo" id="guantes">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Guantes</div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="lapicero-faber">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Lapiceros Faber-Castell</div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="lapicero-pilot">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo">Lapiceros Pilot</div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="cuaderno">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="regla20">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="regla30">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="transportador">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="folder">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="faster">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="goma">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="hojas-bulky">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="hojas-cuadriculadas">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="cd">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="dvd">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="borrador-chico">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="borrador-grande">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="corrector">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="vinifan">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="marcador-cd">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="tajador">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                    <div class="articulo" id="resaltador">
+                        <div class="imagen"><img src=""></div>
+                        <div class="dato titulo"></div>
+                        <div class="dato info"><label>Precio: </label></div>
+                        <input type="submit" value="Hacer Pedido">
+                    </div>
+                </div>
             </div>
         </div>
     </body>
